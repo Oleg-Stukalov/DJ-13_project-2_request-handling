@@ -8,10 +8,10 @@ def home_view(request):
     # функцию `reverse`
     pages = {
         'Главная страница': reverse('home'),
-        'Показать текущее время': '',
-        'Показать содержимое рабочей директории': ''
+        'Показать текущее время': reverse('time'),  # path('current_time/', time_view, name='time'),
+        'Показать содержимое рабочей директории': reverse('workdir')    # path('workdir/', workdir_view, name='workdir'),
     }
-    
+
     # context и параметры render менять не нужно
     # подбробнее о них мы поговорим на следующих лекциях
     context = {
